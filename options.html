@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Options</title>
   <style>
-    body, html {
+    body,
+    html {
       height: 100%;
       margin: 0;
       font-family: Arial, sans-serif;
@@ -17,7 +19,8 @@
     }
 
     .overlay {
-      background-color: rgba(0, 0, 0, 0.5); /* Dark overlay */
+      background-color: rgba(0, 0, 0, 0.5);
+      /* Dark overlay */
       position: absolute;
       width: 100%;
       height: 100%;
@@ -31,7 +34,7 @@
       background-color: rgba(255, 255, 255, 0.8);
       padding: 40px;
       border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
       z-index: 1;
       max-width: 500px;
       width: 90%;
@@ -105,14 +108,17 @@
           'Kanyakumari'
         ]
       };
+
       const places = data[category] || [];
       const display = document.getElementById("places");
+
       display.innerHTML = `
-        <h3>Places:</h3>
-        <ul>${places.map(p => `<li>${p}</li>`).join('')}</ul>
-        <a href="next.zip" download><button>Next</button></a>
-      `;
+    <h3>Places:</h3>
+    <ul>${places.map(p => `<li>${p}</li>`).join('')}</ul>
+    <a href="map.html"><button>Next</button></a>
+  `;
     }
+
   </script>
 </head>
 
@@ -127,4 +133,5 @@
     <div id="places"></div>
   </div>
 </body>
+
 </html>
